@@ -17,8 +17,6 @@ label_aapi <- codebook %>%
   filter(str_detect(name, "C27001D") | str_detect(name, "C27001E")) %>% 
   rename(variable = name) %>% 
   mutate(label = case_when(
-    variable == "C27001D_001" ~"Asian Alone Pop",
-    variable == "C27001E_001" ~"NHPI Alone Pop",
     variable %in% c("C27001D_003", "C27001D_006","C27001D_009",
                     "C27001E_003", "C27001E_006","C27001E_009") ~"with health insurance",
     TRUE ~NA_character_)) %>%  
@@ -74,5 +72,5 @@ pi_cd <- data_clean(table_name = "C27001E", summary_var = "C27001E_001", geo = "
 final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 
-write_csv(final, "acs_database/education_dta.csv", na = "")
+write_csv(final, "acs_database/insurance_dta.csv", na = "")
 
