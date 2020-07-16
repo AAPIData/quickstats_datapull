@@ -29,6 +29,7 @@ label_aapi <- codebook %>%
     str_detect(variable, "C15002E") ~"NHPI Alone")) %>% 
   select(variable, label, group)
 
+
 #data cleaning race function--------
 data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
   data <- get_acs(table = table_name, 
@@ -66,66 +67,15 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
 aa_us <- data_clean(table_name = "C15002D", summary_var = "C15002D_001", geo = "us", geo_label = "national", data_year = year_setting)
 aa_st <- data_clean(table_name = "C15002D", summary_var = "C15002D_001", geo = "state", geo_label = "state", data_year = year_setting)
 aa_ct <- data_clean(table_name = "C15002D", summary_var = "C15002D_001", geo = "county", geo_label = "county", data_year = year_setting)
-dta_cd <- data_clean(table_name = "C15002D", summary_var = "C15002D_001", geo = "congressional district", geo_label = "district", data_year = year_setting)
+aa_cd <- data_clean(table_name = "C15002D", summary_var = "C15002D_001", geo = "congressional district", geo_label = "district", data_year = year_setting)
 
+pi_us <- data_clean(table_name = "C15002E", summary_var = "C15002E_001", geo = "us", geo_label = "national", data_year = year_setting)
+pi_st <- data_clean(table_name = "C15002E", summary_var = "C15002E_001", geo = "state", geo_label = "state", data_year = year_setting)
+pi_ct <- data_clean(table_name = "C15002E", summary_var = "C15002E_001", geo = "county", geo_label = "county", data_year = year_setting)
+pi_cd <- data_clean(table_name = "C15002E", summary_var = "C15002E_001", geo = "congressional district", geo_label = "district", data_year = year_setting)
 
-final_race <- rbind(dta_race_us, dta_race_st, dta_race_ct,  dta_race_cd, dta_race_metro)
-rm(label_race, dta_race_us, dta_race_st, dta_race_ct,  dta_race_cd, dta_race_metro)
+final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
+rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 
-
-
-
-
-
-data <- get_acs(table = "C15002D", 
-                geography = "us", #for state use "state", for congressional district use "district"
-                year = 2018, 
-                survey = "acs5",
-                summary_var = "C15002D_001") #the default is "acs5"
-
-national_data <- data %>%
-  mutate(label = case_when(
-    variable %in% c("C15002D_003", "C15002D_008") ~"Less than HS",
-    variable %in% c("C15002D_004", "C15002D_009") ~"HS or GED",
-    variable %in% c("C15002D_005", "C15002D_010") ~"Some College or AA",
-    variable %in% c("C15002D_006", "C15002D_011") ~"BA or higher",
-    TRUE ~NA_character_)) %>% 
-  filter(is.na(label) == F) %>% 
-  select(-variable) %>% 
-  group_by(GEOID, label) %>% 
-  mutate(estimate = sum(estimate),
-         moe = sum(moe)) %>% 
-  ungroup() %>% 
-  unique() %>% 
-  mutate(ci_detect = )
-
-
-
-#aa alone
-#nhpi alone
-#aa combo
-#nhpi combo
-#total pop
-
-data <- get_acs(variables = c("B02015_001", "B02016_001",
-                              "B02018_001", "B02019_001"),
-                geography = "state",
-                year = 2018,
-                summary_var = "B01003_001")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+write_csv(final, "acs_database/education_dta.csv", na = "")
 
