@@ -14,15 +14,15 @@ label_aapi <- codebook %>%
   filter(str_detect(name, "C15002D") | str_detect(name, "C15002E")) %>% 
   rename(variable = name) %>% 
   mutate(label = case_when(
-    variable == c("C15002D_001", "C15002E_001") ~"Pop Age 25+",
-    variable %in% c("C15002D_003", "C15002D_008") ~"%Less than HS",
-    variable %in% c("C15002E_003", "C15002E_008") ~"%Less than HS",
-    variable %in% c("C15002D_004", "C15002D_009") ~"%HS or GED",
-    variable %in% c("C15002E_004", "C15002E_009") ~"%HS or GED",
-    variable %in% c("C15002D_005", "C15002D_010") ~"%Some College or AA",
-    variable %in% c("C15002E_005", "C15002E_010") ~"%Some College or AA",
-    variable %in% c("C15002D_006", "C15002D_011") ~"%BA or higher",
-    variable %in% c("C15002E_006", "C15002E_011") ~"%BA or higher")) %>%  
+    # variable == c("C15002D_001", "C15002E_001") ~"Pop Age 25+",
+    variable %in% c("C15002D_003", "C15002D_008") ~"Less than HS",
+    variable %in% c("C15002E_003", "C15002E_008") ~"Less than HS",
+    variable %in% c("C15002D_004", "C15002D_009") ~"HS or GED",
+    variable %in% c("C15002E_004", "C15002E_009") ~"HS or GED",
+    variable %in% c("C15002D_005", "C15002D_010") ~"Some College or AA",
+    variable %in% c("C15002E_005", "C15002E_010") ~"Some College or AA",
+    variable %in% c("C15002D_006", "C15002D_011") ~"BA or higher",
+    variable %in% c("C15002E_006", "C15002E_011") ~"BA or higher")) %>%  
   filter(is.na(label) == F) %>% 
   mutate(group = case_when(
     str_detect(variable, "C15002D") ~"Asian American Alone",
@@ -54,12 +54,10 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
       TRUE ~"NO")) %>% 
-    mutate(final_est = case_when(
-      label == "Pop Age 25+" ~estimate,
-      TRUE ~estimate / summary_est),
+    mutate(pct = estimate / summary_est,
       topic = "edu",
       geography = geo_label) %>% 
-    select(GEOID, NAME, topic, group, geography, label, final_est, reliable)
+    select(GEOID, NAME, topic, group, geography, label, estimate, pct, reliable)
   
   return(final_dta)
 }

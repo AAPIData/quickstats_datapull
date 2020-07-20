@@ -17,6 +17,7 @@ label_aapi <- codebook %>%
   filter(str_detect(name, "B16005D") | str_detect(name, "B16005E")) %>% 
   rename(variable = name) %>% 
   mutate(label = case_when(
+    variable %in% c("B16005D_004", "B16005D_009", "B16005E_004", "B16005E_009") ~"speak other languages",
     variable %in% c("B16005D_006", "B16005D_011", "B16005E_006", "B16005E_011") ~"lep",
     TRUE ~NA_character_)) %>%  
   filter(is.na(label) == F) %>% 
