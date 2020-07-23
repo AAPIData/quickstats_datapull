@@ -323,19 +323,19 @@ rm(detailed_pi_alone_us, detailed_pi_alone_st, detailed_pi_alone_ct,
 
 #detailed NHPI combo ---------------
 detailed_pi_combo_us <- data_clean_pi(table_name = "B02019", summary_name = "B02019_001", geo = "us", geo_label = "national", data_year = year_setting,
-                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Alone", survey_type = "acs1")
+                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Combo", survey_type = "acs1")
 
 detailed_pi_combo_st <- data_clean_pi(table_name = "B02019", summary_name = "B02019_001", geo = "state", geo_label = "state", data_year = year_setting,
-                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Alone", survey_type = "acs5")
+                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Combo", survey_type = "acs5")
 
 detailed_pi_combo_ct <- data_clean_pi(table_name = "B02019", summary_name = "B02019_001", geo = "county", geo_label = "county", data_year = year_setting,
-                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Alone", survey_type = "acs5")
+                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Combo", survey_type = "acs5")
 
 detailed_pi_combo_cd <- data_clean_pi(table_name = "B02019", summary_name = "B02019_001", geo = "congressional district", geo_label = "district", data_year = year_setting,
-                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Alone", survey_type = "acs5")
+                                      label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Combo", survey_type = "acs5")
 
 detailed_pi_combo_metro <- data_clean_pi(table_name = "B02019", summary_name = "B02019_001", geo = "metropolitan statistical area/micropolitan statistical area", geo_label = "metro", data_year = year_setting,
-                                         label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Alone", survey_type = "acs5") %>% 
+                                         label_df1 = nhpi_combo1, label_df2 = nhpi_combo2, group = "Detailed AAPI Combo", survey_type = "acs5") %>% 
   filter(str_detect(NAME, "Metro Area"))
 
 final_detailed_pi_combo <- rbind(detailed_pi_combo_us, detailed_pi_combo_st, detailed_pi_combo_ct,
