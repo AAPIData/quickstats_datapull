@@ -47,17 +47,20 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
     ungroup() %>% 
     select(-variable) %>% 
     unique() %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "With insurance",
+      geography = geo_label) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
       TRUE ~"NO")) %>% 
-    mutate(pct = estimate/summary_est,
-      topic = "insurance",
-      geography = geo_label) %>% 
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, summary_est, reliable)
   
   return(final_dta)
 }
+
 #final tables --------
 aa_us <- data_clean(table_name = "C27001D", summary_var = "C27001D_001", geo = "us", geo_label = "national", data_year = year_setting)
 aa_st <- data_clean(table_name = "C27001D", summary_var = "C27001D_001", geo = "state", geo_label = "state", data_year = year_setting)
@@ -70,6 +73,16 @@ pi_ct <- data_clean(table_name = "C27001E", summary_var = "C27001E_001", geo = "
 pi_cd <- data_clean(table_name = "C27001E", summary_var = "C27001E_001", geo = "congressional district", geo_label = "district", data_year = year_setting)
 
 final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
+
+final <- final %>%
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  mutate(estimate_reliable = case_when(
+    reliable == "YES" ~estimate,
+    TRUE ~NA_real_)) %>% 
+  mutate(pct_reliable = case_when(
+    reliable == "YES" ~pct,
+    TRUE ~NA_real_))
+
 rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 
 write_csv(final, "acs_database/insurance_dta.csv", na = "")
