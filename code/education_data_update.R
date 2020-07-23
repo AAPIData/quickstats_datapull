@@ -82,7 +82,7 @@ final <- final %>%
   mutate(estimate_reliable = case_when(
     reliable == "YES" ~estimate,
     TRUE ~NA_real_)) %>% 
-  mutate(pct_reliale = case_when(
+  mutate(pct_reliable = case_when(
     reliable == "YES" ~pct,
     TRUE ~NA_real_))
 

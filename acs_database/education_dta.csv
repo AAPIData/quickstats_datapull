@@ -1,4 +1,4 @@
-GEOID,NAME,topic,group,geography,label,estimate,pct,reliable,estimate_reliable,pct_reliale
+GEOID,NAME,topic,group,geography,label,estimate,pct,reliable,estimate_reliable,pct_reliable
 1,United States,edu,Asian American Alone,national,Less than HS,1629131,0.132,YES,1629131,0.132
 1,United States,edu,Asian American Alone,national,HS or GED,1831166,0.148,YES,1831166,0.148
 1,United States,edu,Asian American Alone,national,Some College or AA,2289590,0.185,YES,2289590,0.185
