@@ -59,7 +59,7 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
       TRUE ~"NO")) %>% 
-    select(GEOID, NAME, topic, group, geography, label, estimate, pct, reliable)
+    select(GEOID, NAME, topic, group, geography, label, estimate, pct, summary_est, reliable)
   
   return(final_dta)
 }
