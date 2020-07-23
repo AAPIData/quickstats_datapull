@@ -17,8 +17,8 @@ label_aapi <- codebook %>%
   filter(str_detect(name, "B16005D") | str_detect(name, "B16005E")) %>% 
   rename(variable = name) %>% 
   mutate(label = case_when(
-    variable %in% c("B16005D_004", "B16005D_009", "B16005E_004", "B16005E_009") ~"speak other languages",
-    variable %in% c("B16005D_006", "B16005D_011", "B16005E_006", "B16005E_011") ~"lep",
+    variable %in% c("B16005D_004", "B16005D_009", "B16005E_004", "B16005E_009") ~"Speak another language",
+    variable %in% c("B16005D_006", "B16005D_011", "B16005E_006", "B16005E_011") ~"LEP",
     TRUE ~NA_character_)) %>%  
   filter(is.na(label) == F) %>% 
   mutate(group = case_when(
@@ -47,13 +47,15 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
     ungroup() %>% 
     select(-variable) %>% 
     unique() %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "LEP",
+      geography = geo_label) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
       TRUE ~"NO")) %>% 
-    mutate(pct = estimate/summary_est,
-           topic = "LEP",
-           geography = geo_label) %>% 
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, summary_est, reliable)
   
   return(final_dta)
@@ -71,6 +73,16 @@ pi_cd <- data_clean(table_name = "B16005E", summary_var = "B16005E_001", geo = "
 
 final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
+
+final <- final %>%
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  mutate(estimate_reliable = case_when(
+    reliable == "YES" ~estimate,
+    TRUE ~NA_real_)) %>% 
+  mutate(pct_reliable = case_when(
+    reliable == "YES" ~pct,
+    TRUE ~NA_real_))
+
 
 write_csv(final, "acs_database/lep_dta.csv", na = "")
 
