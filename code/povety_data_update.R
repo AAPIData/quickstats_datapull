@@ -17,7 +17,7 @@ label_aapi <- codebook %>%
   filter(str_detect(name, "B17001D") | str_detect(name, "B17001E")) %>% 
   rename(variable = name) %>% 
   mutate(label = case_when(
-    variable %in% c("B17001D_002", "B17001E_002") ~"below pov",
+    variable %in% c("B17001D_002", "B17001E_002") ~"Below poverty",
     TRUE ~NA_character_)) %>%  
   filter(is.na(label) == F) %>% 
   mutate(group = case_when(
@@ -46,13 +46,15 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
     ungroup() %>% 
     select(-variable) %>% 
     unique() %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "poverty",
+      geography = geo_label) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
-      TRUE ~"NO")) %>% 
-    mutate(pct = estimate/summary_est,
-           topic = "poverty",
-           geography = geo_label) %>% 
+      TRUE ~"NO")) %>%  
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, summary_est, reliable)
   
   return(final_dta)
@@ -70,6 +72,13 @@ pi_cd <- data_clean(table_name = "B17001E", summary_var = "B17001E_001", geo = "
 
 final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
-
+final <- final %>%
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  mutate(estimate_reliable = case_when(
+    reliable == "YES" ~estimate,
+    TRUE ~NA_real_)) %>% 
+  mutate(pct_reliable = case_when(
+    reliable == "YES" ~pct,
+    TRUE ~NA_real_))
 write_csv(final, "acs_database/poverty_dta.csv", na = "")
 
