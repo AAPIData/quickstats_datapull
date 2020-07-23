@@ -50,13 +50,15 @@ data_clean <- function(table_name, summary_var, geo, geo_label, data_year){
     ungroup() %>% 
     select(-variable) %>% 
     unique() %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "edu",
+      geography = geo_label) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
       TRUE ~"NO")) %>% 
-    mutate(pct = estimate / summary_est,
-      topic = "edu",
-      geography = geo_label) %>% 
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, reliable)
   
   return(final_dta)
@@ -74,6 +76,15 @@ pi_cd <- data_clean(table_name = "C15002E", summary_var = "C15002E_001", geo = "
 
 final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
+
+final <- final %>%
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  mutate(estimate_reliable = case_when(
+    reliable == "YES" ~estimate,
+    TRUE ~NA_real_)) %>% 
+  mutate(pct_reliale = case_when(
+    reliable == "YES" ~pct,
+    TRUE ~NA_real_))
 
 write_csv(final, "acs_database/education_dta.csv", na = "")
 
