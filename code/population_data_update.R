@@ -362,14 +362,19 @@ rm(detailed_pi_combo_us, detailed_pi_combo_st, detailed_pi_combo_ct,
 final <- rbind(final_race, final_detailed_aa_alone, final_detailed_aa_combo, final_detailed_pi_alone, final_detailed_pi_combo)
 rm(final_race, final_detailed_aa_alone, final_detailed_aa_combo, final_detailed_pi_alone, final_detailed_pi_combo)
 
+
 final <- final %>%
-  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  filter(!str_detect(NAME, "Puerto Rico"),
+         !str_detect(NAME, "PR Metro Area")) %>% 
   mutate(estimate_reliable = case_when(
     reliable == "YES" ~estimate,
     TRUE ~NA_real_)) %>% 
   mutate(pct_reliable = case_when(
     reliable == "YES" ~pct,
     TRUE ~NA_real_))
+
+# final[22472:22474,2]
+# final[22472,2]
 
 write_csv(final, "acs_database/population_dta.csv", na = "")
 
@@ -379,5 +384,6 @@ write_csv(final, "acs_database/population_dta.csv", na = "")
 #                 geography = "us",
 #                 survey = "acs5",
 #                 summary_var = "B02016_001")
-#   
+
+
 
