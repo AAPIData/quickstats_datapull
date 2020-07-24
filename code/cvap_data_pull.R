@@ -36,6 +36,7 @@ final_dta <- data %>%
     TRUE ~NA_real_)) %>% 
   mutate(topic = "cvap",
          label = "CVAP") %>% 
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
 select(NAME, topic, group, geography, label, estimate, pct, reliable, estimate_reliable, pct_reliable)
 
 write_csv(final_dta, "acs_database/cvap_dta.csv", na = "")
