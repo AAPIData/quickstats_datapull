@@ -1,6 +1,7 @@
 library(tidyverse)
 library(tidycensus)
 library(stringr)
+setwd("/Users/sunnyshao/Documents/quickstats_datapull")
 
 year_setting <- 2018
 codebook <- load_variables(year =year_setting, dataset = "acs1", cache = TRUE)
@@ -44,21 +45,26 @@ data_clean_race <- function(geo, geo_label, data_year, survey_type){
     #turn NA moe value to zero
     mutate(moe = case_when(
       is.na(moe) == T ~0,
-      TRUE ~moe)) %>% 
+      TRUE ~moe)) %>%
+    mutate(summary_moe = case_when(
+      is.na(summary_moe) == T ~0,
+      TRUE ~summary_moe)) %>% 
     left_join(label_race) %>% 
-    group_by(GEOID, label) %>% 
+    group_by(GEOID, group, label) %>% 
     mutate(estimate = sum(estimate),
            moe = sum(moe)) %>% 
     ungroup() %>% 
     select(-variable) %>% 
     unique() %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "population",
+      geography = geo_label) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
-      TRUE ~"NO")) %>% 
-    mutate(pct = estimate / summary_est,
-           topic = "population",
-           geography = geo_label) %>% 
+      TRUE ~"NO")) %>%  
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, reliable)
   
   return(final_dta)
@@ -126,14 +132,16 @@ data_clean_aa <- function(table_name, summary_name, geo, geo_label, data_year, l
     ungroup() %>% 
     select(-variable) %>% 
     unique() %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "edu",
+      geography = geo_label,
+      group = group) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
       TRUE ~"NO")) %>% 
-    mutate(pct = estimate / summary_est,
-           topic = "population",
-           geography = geo_label,
-           group = group) %>% 
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, reliable)
   
   return(final_dta)
@@ -283,14 +291,16 @@ data_clean_pi<- function(table_name, summary_name, geo, geo_label,
     unique()
   
   final_dta <- rbind(dta1, dta2) %>% 
+    mutate(pct = case_when(
+      summary_est > 0 ~round((estimate/summary_est), digits = 3),
+      TRUE ~NA_real_),
+      topic = "edu",
+      geography = geo_label,
+      group = group) %>% 
     #set estimate unreliable if moe is larger than 50% of itself
     mutate(reliable = case_when(
       moe <= 0.5*estimate ~"YES",
-      TRUE ~"NO")) %>% 
-    mutate(pct = estimate / summary_est,
-           topic = "population",
-           geography = geo_label,
-           group = group) %>% 
+      TRUE ~"NO")) %>%
     select(GEOID, NAME, topic, group, geography, label, estimate, pct, reliable)
   
   return(final_dta)
@@ -351,6 +361,15 @@ rm(detailed_pi_combo_us, detailed_pi_combo_st, detailed_pi_combo_ct,
 
 final <- rbind(final_race, final_detailed_aa_alone, final_detailed_aa_combo, final_detailed_pi_alone, final_detailed_pi_combo)
 rm(final_race, final_detailed_aa_alone, final_detailed_aa_combo, final_detailed_pi_alone, final_detailed_pi_combo)
+
+final <- final %>%
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  mutate(estimate_reliable = case_when(
+    reliable == "YES" ~estimate,
+    TRUE ~NA_real_)) %>% 
+  mutate(pct_reliable = case_when(
+    reliable == "YES" ~pct,
+    TRUE ~NA_real_))
 
 write_csv(final, "acs_database/population_dta.csv", na = "")
 
