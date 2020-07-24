@@ -37,11 +37,11 @@ final_dta <- data %>%
   mutate(topic = "cvap",
          label = "CVAP") %>% 
   filter(!str_detect(NAME, "Puerto Rico")) %>% 
-  mutate(id = row_number()) %>% 
+  # mutate(id = row_number()) %>% 
   mutate(NAME = case_when(
     str_detect(NAME, "Ana County, New Mexico") ~"Dona Ana County, New Mexico",
     TRUE ~NAME)) %>%
-select(id, NAME, topic, group, geography, label, estimate, pct, reliable, estimate_reliable, pct_reliable)
+select(NAME, topic, group, geography, label, estimate, pct, reliable, estimate_reliable, pct_reliable)
 
 # final_dta[3710,2]
 
