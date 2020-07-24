@@ -134,7 +134,7 @@ for(i in 1:51) {
   if(i <= 51){
     path <- paste("undocumented_raw/", toString(dict[i,1]), sep = "")
     
-    data1 <- read_excel(path, range = "A19:B41", col_names = c("country","pop")) %>% mutate(group = "Detailed Asian Am Alone")
+    data1 <- read_excel(path, range = "A21:B44", col_names = c("country","pop")) %>% mutate(group = "Detailed Asian Am Alone")
     data2 <- read_excel(path, range = "A3", col_names = c("state")) %>% mutate(group = "Detailed Asian Am Alone")
     data <- data1 %>% left_join(data2)
     data <- rbind(data, data_previous)
