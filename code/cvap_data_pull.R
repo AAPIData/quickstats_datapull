@@ -37,6 +37,15 @@ final_dta <- data %>%
   mutate(topic = "cvap",
          label = "CVAP") %>% 
   filter(!str_detect(NAME, "Puerto Rico")) %>% 
-select(NAME, topic, group, geography, label, estimate, pct, reliable, estimate_reliable, pct_reliable)
+  mutate(id = row_number()) %>% 
+  mutate(NAME = case_when(
+    str_detect(NAME, "Ana County, New Mexico") ~"Dona Ana County, New Mexico",
+    TRUE ~NAME)) %>%
+select(id, NAME, topic, group, geography, label, estimate, pct, reliable, estimate_reliable, pct_reliable)
+
+# final_dta[3710,2]
 
 write_csv(final_dta, "acs_database/cvap_dta.csv", na = "")
+
+  
+
