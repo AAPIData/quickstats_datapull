@@ -1,4 +1,208 @@
 geography,NAME,group,topic,label,estimate,pct,summary_est,reliable,estimate_reliable,pct_reliable
+state,Hawaii,Detailed Asian Am Alone,undoc,Undocumented Indian,,,2249,NO,,
+state,Hawaii,Detailed Asian Am Alone,undoc,Undocumented Chinese,4939,0.089,55464,YES,4939,0.089
+state,Hawaii,Detailed Asian Am Alone,undoc,Undocumented Korean,4111,0.166,24804,YES,4111,0.166
+state,Hawaii,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,12213,NO,,
+state,District of Columbia,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,District of Columbia,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,District of Columbia,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,District of Columbia,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Delaware,Detailed Asian Am Alone,undoc,Undocumented Indian,2350,,,NO,,
+state,Delaware,Detailed Asian Am Alone,undoc,Undocumented Chinese,2225,,,NO,,
+state,Delaware,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Delaware,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,California,Detailed Asian Am Alone,undoc,Undocumented Indian,117117,0.144,815948,YES,117117,0.144
+state,California,Detailed Asian Am Alone,undoc,Undocumented Chinese,116890,0.076,1542802,YES,116890,0.076
+state,California,Detailed Asian Am Alone,undoc,Undocumented Korean,50385,0.107,470112,YES,50385,0.107
+state,California,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,16492,0.024,674243,YES,16492,0.024
+state,Washington,Detailed Asian Am Alone,undoc,Undocumented Indian,27165,0.212,128356,YES,27165,0.212
+state,Washington,Detailed Asian Am Alone,undoc,Undocumented Chinese,15451,0.11,140750,YES,15451,0.11
+state,Washington,Detailed Asian Am Alone,undoc,Undocumented Korean,4933,0.074,66990,YES,4933,0.074
+state,Washington,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,6067,0.072,84125,YES,6067,0.072
+state,Oregon,Detailed Asian Am Alone,undoc,Undocumented Indian,5339,0.204,26182,YES,5339,0.204
+state,Oregon,Detailed Asian Am Alone,undoc,Undocumented Chinese,3873,0.096,40224,YES,3873,0.096
+state,Oregon,Detailed Asian Am Alone,undoc,Undocumented Korean,,,17743,NO,,
+state,Oregon,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,32447,NO,,
+state,Alaska,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,Alaska,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Alaska,Detailed Asian Am Alone,undoc,Undocumented Korean,1215,,,NO,,
+state,Alaska,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Nevada,Detailed Asian Am Alone,undoc,Undocumented Indian,2691,0.242,11123,YES,2691,0.242
+state,Nevada,Detailed Asian Am Alone,undoc,Undocumented Chinese,3066,0.082,37555,YES,3066,0.082
+state,Nevada,Detailed Asian Am Alone,undoc,Undocumented Korean,1759,0.15,11750,YES,1759,0.15
+state,Nevada,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,17744,NO,,
+state,Arizona,Detailed Asian Am Alone,undoc,Undocumented Indian,11247,0.191,58926,YES,11247,0.191
+state,Arizona,Detailed Asian Am Alone,undoc,Undocumented Chinese,3649,0.08,45854,YES,3649,0.08
+state,Arizona,Detailed Asian Am Alone,undoc,Undocumented Korean,1182,0.076,15633,YES,1182,0.076
+state,Arizona,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1164,0.042,27751,YES,1164,0.042
+state,Utah,Detailed Asian Am Alone,undoc,Undocumented Indian,2897,0.24,12079,YES,2897,0.24
+state,Utah,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,13911,NO,,
+state,Utah,Detailed Asian Am Alone,undoc,Undocumented Korean,1746,0.258,6756,YES,1746,0.258
+state,Utah,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,9663,NO,,
+state,Idaho,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,Idaho,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Idaho,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Idaho,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Montana,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,Montana,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Montana,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Montana,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Wyoming,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,Wyoming,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Wyoming,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Wyoming,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Colorado,Detailed Asian Am Alone,undoc,Undocumented Indian,5747,0.162,35512,YES,5747,0.162
+state,Colorado,Detailed Asian Am Alone,undoc,Undocumented Chinese,2600,0.084,31086,YES,2600,0.084
+state,Colorado,Detailed Asian Am Alone,undoc,Undocumented Korean,1265,0.055,22998,YES,1265,0.055
+state,Colorado,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1354,0.054,25088,YES,1354,0.054
+state,New Mexico,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,New Mexico,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,New Mexico,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,New Mexico,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Texas,Detailed Asian Am Alone,undoc,Undocumented Indian,76972,0.17,452598,YES,76972,0.17
+state,Texas,Detailed Asian Am Alone,undoc,Undocumented Chinese,18631,0.087,215366,YES,18631,0.087
+state,Texas,Detailed Asian Am Alone,undoc,Undocumented Korean,14356,0.178,80649,YES,14356,0.178
+state,Texas,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,17014,0.063,267996,YES,17014,0.063
+state,Oklahoma,Detailed Asian Am Alone,undoc,Undocumented Indian,2704,0.147,18453,YES,2704,0.147
+state,Oklahoma,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,10431,NO,,
+state,Oklahoma,Detailed Asian Am Alone,undoc,Undocumented Korean,1176,0.162,7244,YES,1176,0.162
+state,Oklahoma,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,20629,NO,,
+state,Kansas,Detailed Asian Am Alone,undoc,Undocumented Indian,5279,0.257,20564,YES,5279,0.257
+state,Kansas,Detailed Asian Am Alone,undoc,Undocumented Chinese,1653,0.146,11304,YES,1653,0.146
+state,Kansas,Detailed Asian Am Alone,undoc,Undocumented Korean,,,5136,NO,,
+state,Kansas,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1251,0.073,17089,YES,1251,0.073
+state,Nebraska,Detailed Asian Am Alone,undoc,Undocumented Indian,2076,0.249,8337,YES,2076,0.249
+state,Nebraska,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,5282,NO,,
+state,Nebraska,Detailed Asian Am Alone,undoc,Undocumented Korean,,,3833,NO,,
+state,Nebraska,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,7132,NO,,
+state,South Dakota,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,South Dakota,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,South Dakota,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,South Dakota,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,North Dakota,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,North Dakota,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,North Dakota,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,North Dakota,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Minnesota,Detailed Asian Am Alone,undoc,Undocumented Indian,7312,0.168,43596,YES,7312,0.168
+state,Minnesota,Detailed Asian Am Alone,undoc,Undocumented Chinese,2391,0.075,31890,YES,2391,0.075
+state,Minnesota,Detailed Asian Am Alone,undoc,Undocumented Korean,1220,0.074,16431,YES,1220,0.074
+state,Minnesota,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,25404,NO,,
+state,Iowa,Detailed Asian Am Alone,undoc,Undocumented Indian,1548,0.125,12415,YES,1548,0.125
+state,Iowa,Detailed Asian Am Alone,undoc,Undocumented Chinese,1197,0.092,13016,YES,1197,0.092
+state,Iowa,Detailed Asian Am Alone,undoc,Undocumented Korean,,,6717,NO,,
+state,Iowa,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1193,0.102,11705,YES,1193,0.102
+state,Missouri,Detailed Asian Am Alone,undoc,Undocumented Indian,5180,0.17,30435,YES,5180,0.17
+state,Missouri,Detailed Asian Am Alone,undoc,Undocumented Chinese,3321,0.119,27901,YES,3321,0.119
+state,Missouri,Detailed Asian Am Alone,undoc,Undocumented Korean,1548,0.134,11526,YES,1548,0.134
+state,Missouri,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,17208,NO,,
+state,Arkansas,Detailed Asian Am Alone,undoc,Undocumented Indian,2937,0.307,9581,YES,2937,0.307
+state,Arkansas,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,4983,NO,,
+state,Arkansas,Detailed Asian Am Alone,undoc,Undocumented Korean,,,3178,NO,,
+state,Arkansas,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1863,0.228,8184,YES,1863,0.228
+state,Louisiana,Detailed Asian Am Alone,undoc,Undocumented Indian,2178,0.221,9858,YES,2178,0.221
+state,Louisiana,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,10931,NO,,
+state,Louisiana,Detailed Asian Am Alone,undoc,Undocumented Korean,,,2534,NO,,
+state,Louisiana,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,2105,0.072,29392,YES,2105,0.072
+state,Wisconsin,Detailed Asian Am Alone,undoc,Undocumented Indian,6032,0.182,33093,YES,6032,0.182
+state,Wisconsin,Detailed Asian Am Alone,undoc,Undocumented Chinese,3541,0.138,25715,YES,3541,0.138
+state,Wisconsin,Detailed Asian Am Alone,undoc,Undocumented Korean,,,8900,NO,,
+state,Wisconsin,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,6024,NO,,
+state,Illinois,Detailed Asian Am Alone,undoc,Undocumented Indian,32465,0.127,256122,YES,32465,0.127
+state,Illinois,Detailed Asian Am Alone,undoc,Undocumented Chinese,12810,0.099,129625,YES,12810,0.099
+state,Illinois,Detailed Asian Am Alone,undoc,Undocumented Korean,3212,0.057,56597,YES,3212,0.057
+state,Illinois,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,2908,0.082,35367,YES,2908,0.082
+state,Mississippi,Detailed Asian Am Alone,undoc,Undocumented Indian,2167,,,NO,,
+state,Mississippi,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Mississippi,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Mississippi,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Alabama,Detailed Asian Am Alone,undoc,Undocumented Indian,1742,0.121,14401,YES,1742,0.121
+state,Alabama,Detailed Asian Am Alone,undoc,Undocumented Chinese,1952,0.202,9653,YES,1952,0.202
+state,Alabama,Detailed Asian Am Alone,undoc,Undocumented Korean,1445,0.141,10238,YES,1445,0.141
+state,Alabama,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,10185,NO,,
+state,Georgia,Detailed Asian Am Alone,undoc,Undocumented Indian,28247,0.199,141915,YES,28247,0.199
+state,Georgia,Detailed Asian Am Alone,undoc,Undocumented Chinese,5561,0.085,65390,YES,5561,0.085
+state,Georgia,Detailed Asian Am Alone,undoc,Undocumented Korean,9350,0.176,53227,YES,9350,0.176
+state,Georgia,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,3950,0.066,60114,YES,3950,0.066
+state,Florida,Detailed Asian Am Alone,undoc,Undocumented Indian,15799,0.092,171778,YES,15799,0.092
+state,Florida,Detailed Asian Am Alone,undoc,Undocumented Chinese,11175,0.102,110011,YES,11175,0.102
+state,Florida,Detailed Asian Am Alone,undoc,Undocumented Korean,2211,0.073,30485,YES,2211,0.073
+state,Florida,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,5123,0.071,72431,YES,5123,0.071
+state,South Carolina,Detailed Asian Am Alone,undoc,Undocumented Indian,3447,0.163,21145,YES,3447,0.163
+state,South Carolina,Detailed Asian Am Alone,undoc,Undocumented Chinese,1766,0.117,15156,YES,1766,0.117
+state,South Carolina,Detailed Asian Am Alone,undoc,Undocumented Korean,,,4741,NO,,
+state,South Carolina,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,13641,NO,,
+state,Tennessee,Detailed Asian Am Alone,undoc,Undocumented Indian,7098,0.269,26391,YES,7098,0.269
+state,Tennessee,Detailed Asian Am Alone,undoc,Undocumented Chinese,3870,0.185,20915,YES,3870,0.185
+state,Tennessee,Detailed Asian Am Alone,undoc,Undocumented Korean,,,9488,NO,,
+state,Tennessee,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,14882,NO,,
+state,North Carolina,Detailed Asian Am Alone,undoc,Undocumented Indian,20431,0.196,104438,YES,20431,0.196
+state,North Carolina,Detailed Asian Am Alone,undoc,Undocumented Chinese,5063,0.1,50878,YES,5063,0.1
+state,North Carolina,Detailed Asian Am Alone,undoc,Undocumented Korean,3876,0.172,22544,YES,3876,0.172
+state,North Carolina,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,3865,0.138,28006,YES,3865,0.138
+state,Kentucky,Detailed Asian Am Alone,undoc,Undocumented Indian,1658,0.116,14340,YES,1658,0.116
+state,Kentucky,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,12639,NO,,
+state,Kentucky,Detailed Asian Am Alone,undoc,Undocumented Korean,,,5148,NO,,
+state,Kentucky,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1265,0.217,5819,YES,1265,0.217
+state,Virginia,Detailed Asian Am Alone,undoc,Undocumented Indian,23807,0.155,153601,YES,23807,0.155
+state,Virginia,Detailed Asian Am Alone,undoc,Undocumented Chinese,5842,0.078,75325,YES,5842,0.078
+state,Virginia,Detailed Asian Am Alone,undoc,Undocumented Korean,3683,0.05,73411,YES,3683,0.05
+state,Virginia,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,2815,0.041,68558,YES,2815,0.041
+state,West Virginia,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,West Virginia,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,West Virginia,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,West Virginia,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,Indiana,Detailed Asian Am Alone,undoc,Undocumented Indian,7563,0.173,43709,YES,7563,0.173
+state,Indiana,Detailed Asian Am Alone,undoc,Undocumented Chinese,4385,0.136,32334,YES,4385,0.136
+state,Indiana,Detailed Asian Am Alone,undoc,Undocumented Korean,1312,0.134,9780,YES,1312,0.134
+state,Indiana,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,10075,NO,,
+state,Ohio,Detailed Asian Am Alone,undoc,Undocumented Indian,18923,0.199,95049,YES,18923,0.199
+state,Ohio,Detailed Asian Am Alone,undoc,Undocumented Chinese,6676,0.117,57253,YES,6676,0.117
+state,Ohio,Detailed Asian Am Alone,undoc,Undocumented Korean,1838,0.103,17893,YES,1838,0.103
+state,Ohio,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,17619,NO,,
+state,Michigan,Detailed Asian Am Alone,undoc,Undocumented Indian,17484,0.148,117983,YES,17484,0.148
+state,Michigan,Detailed Asian Am Alone,undoc,Undocumented Chinese,6489,0.112,58101,YES,6489,0.112
+state,Michigan,Detailed Asian Am Alone,undoc,Undocumented Korean,3813,0.14,27174,YES,3813,0.14
+state,Michigan,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1552,0.073,21132,YES,1552,0.073
+state,Pennsylvania,Detailed Asian Am Alone,undoc,Undocumented Indian,21103,0.147,143539,YES,21103,0.147
+state,Pennsylvania,Detailed Asian Am Alone,undoc,Undocumented Chinese,13281,0.115,115639,YES,13281,0.115
+state,Pennsylvania,Detailed Asian Am Alone,undoc,Undocumented Korean,4542,0.116,39144,YES,4542,0.116
+state,Pennsylvania,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,2095,0.051,40920,YES,2095,0.051
+state,Maryland,Detailed Asian Am Alone,undoc,Undocumented Indian,9002,0.091,99035,YES,9002,0.091
+state,Maryland,Detailed Asian Am Alone,undoc,Undocumented Chinese,7778,0.091,85118,YES,7778,0.091
+state,Maryland,Detailed Asian Am Alone,undoc,Undocumented Korean,5485,0.121,45273,YES,5485,0.121
+state,Maryland,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,1356,0.048,28104,YES,1356,0.048
+state,New Jersey,Detailed Asian Am Alone,undoc,Undocumented Indian,66604,0.172,387244,YES,66604,0.172
+state,New Jersey,Detailed Asian Am Alone,undoc,Undocumented Chinese,11679,0.079,148003,YES,11679,0.079
+state,New Jersey,Detailed Asian Am Alone,undoc,Undocumented Korean,12016,0.121,99165,YES,12016,0.121
+state,New Jersey,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,19085,NO,,
+state,New York,Detailed Asian Am Alone,undoc,Undocumented Indian,20851,0.055,379439,YES,20851,0.055
+state,New York,Detailed Asian Am Alone,undoc,Undocumented Chinese,53944,0.078,689449,YES,53944,0.078
+state,New York,Detailed Asian Am Alone,undoc,Undocumented Korean,13643,0.11,123507,YES,13643,0.11
+state,New York,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,29751,NO,,
+state,Connecticut,Detailed Asian Am Alone,undoc,Undocumented Indian,11083,0.156,70961,YES,11083,0.156
+state,Connecticut,Detailed Asian Am Alone,undoc,Undocumented Chinese,3439,0.097,35627,YES,3439,0.097
+state,Connecticut,Detailed Asian Am Alone,undoc,Undocumented Korean,,,9129,NO,,
+state,Connecticut,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,8792,NO,,
+state,Rhode Island,Detailed Asian Am Alone,undoc,Undocumented Indian,1013,0.121,8342,YES,1013,0.121
+state,Rhode Island,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,7984,NO,,
+state,Rhode Island,Detailed Asian Am Alone,undoc,Undocumented Korean,,,1538,NO,,
+state,Rhode Island,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,1916,NO,,
+state,Massachusetts,Detailed Asian Am Alone,undoc,Undocumented Indian,17611,0.147,120063,YES,17611,0.147
+state,Massachusetts,Detailed Asian Am Alone,undoc,Undocumented Chinese,13857,0.079,176164,YES,13857,0.079
+state,Massachusetts,Detailed Asian Am Alone,undoc,Undocumented Korean,2889,0.123,23561,YES,2889,0.123
+state,Massachusetts,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,2083,0.039,52771,YES,2083,0.039
+state,Vermont,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,Vermont,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Vermont,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Vermont,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
+state,New Hampshire,Detailed Asian Am Alone,undoc,Undocumented Indian,1622,0.167,9712,YES,1622,0.167
+state,New Hampshire,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,7816,NO,,
+state,New Hampshire,Detailed Asian Am Alone,undoc,Undocumented Korean,,,1870,NO,,
+state,New Hampshire,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,3361,NO,,
+state,Maine,Detailed Asian Am Alone,undoc,Undocumented Indian,,,,NO,,
+state,Maine,Detailed Asian Am Alone,undoc,Undocumented Chinese,,,,NO,,
+state,Maine,Detailed Asian Am Alone,undoc,Undocumented Korean,,,,NO,,
+state,Maine,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,,,,NO,,
 state,Hawaii,Asian American Alone,undoc,Undocumented,25316,0.047,534479,YES,25316,0.047
 state,District of Columbia,Asian American Alone,undoc,Undocumented,1179,0.043,27538,YES,1179,0.043
 state,Delaware,Asian American Alone,undoc,Undocumented,5919,0.152,39023,YES,5919,0.152
@@ -50,3 +254,9 @@ state,Massachusetts,Asian American Alone,undoc,Undocumented,44167,0.093,472403,Y
 state,Vermont,Asian American Alone,undoc,Undocumented,,,11859,YES,,
 state,New Hampshire,Asian American Alone,undoc,Undocumented,2728,0.076,36048,YES,2728,0.076
 state,Maine,Asian American Alone,undoc,Undocumented,1551,0.099,15683,YES,1551,0.099
+national,United States,Detailed Asian Am Alone,undoc,Undocumented Indian,619482,0.149,4161088,YES,619482,0.149
+national,United States,Detailed Asian Am Alone,undoc,Undocumented Chinese,358614,0.085,4217892,YES,358614,0.085
+national,United States,Detailed Asian Am Alone,undoc,Undocumented Korean,161271,0.11,1468279,YES,161271,0.11
+national,United States,Detailed Asian Am Alone,undoc,Undocumented Vietnamese,83721,0.045,1862395,YES,83721,0.045
+national,United States,Detailed Asian Am Alone,undoc,Undocumented Pakistani,48512,0.099,487937,YES,48512,0.099
+national,United States,Asian American Alone,undoc,Undocumented,311271,0.017,18415198,YES,311271,0.017
