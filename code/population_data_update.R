@@ -364,8 +364,11 @@ rm(final_race, final_detailed_aa_alone, final_detailed_aa_combo, final_detailed_
 
 
 final <- final %>%
-  filter(!str_detect(NAME, "Puerto Rico"),
-         !str_detect(NAME, "PR Metro Area")) %>% 
+  filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  filter(!str_detect(NAME, "PR Metro Area")) %>%
+  mutate(NAME = case_when(
+    str_detect(NAME, "Ana County, New Mexico") ~"Dona Ana County, New Mexico",
+    TRUE ~NAME)) %>%
   mutate(estimate_reliable = case_when(
     reliable == "YES" ~estimate,
     TRUE ~NA_real_)) %>% 

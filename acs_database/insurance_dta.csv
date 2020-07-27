@@ -1853,7 +1853,7 @@ GEOID,NAME,topic,group,geography,label,estimate,pct,summary_est,reliable,estimat
 35007,"Colfax County, New Mexico",With insurance,Asian American Alone,county,with health insurance,42,1,42,NO,,
 35009,"Curry County, New Mexico",With insurance,Asian American Alone,county,with health insurance,735,0.97,758,YES,735,0.97
 35011,"De Baca County, New Mexico",With insurance,Asian American Alone,county,with health insurance,6,1,6,NO,,
-35013,"Do�a Ana County, New Mexico",With insurance,Asian American Alone,county,with health insurance,2191,0.965,2270,YES,2191,0.965
+35013,"Dona Ana County, New Mexico",With insurance,Asian American Alone,county,with health insurance,2191,0.965,2270,YES,2191,0.965
 35015,"Eddy County, New Mexico",With insurance,Asian American Alone,county,with health insurance,150,0.667,225,NO,,
 35017,"Grant County, New Mexico",With insurance,Asian American Alone,county,with health insurance,79,1,79,NO,,
 35019,"Guadalupe County, New Mexico",With insurance,Asian American Alone,county,with health insurance,0,,0,NO,,
@@ -5486,7 +5486,7 @@ GEOID,NAME,topic,group,geography,label,estimate,pct,summary_est,reliable,estimat
 35007,"Colfax County, New Mexico",With insurance,NHPI Alone,county,with health insurance,0,,0,NO,,
 35009,"Curry County, New Mexico",With insurance,NHPI Alone,county,with health insurance,128,1,128,NO,,
 35011,"De Baca County, New Mexico",With insurance,NHPI Alone,county,with health insurance,0,,0,NO,,
-35013,"Do�a Ana County, New Mexico",With insurance,NHPI Alone,county,with health insurance,59,1,59,NO,,
+35013,"Dona Ana County, New Mexico",With insurance,NHPI Alone,county,with health insurance,59,1,59,NO,,
 35015,"Eddy County, New Mexico",With insurance,NHPI Alone,county,with health insurance,0,,0,NO,,
 35017,"Grant County, New Mexico",With insurance,NHPI Alone,county,with health insurance,6,1,6,NO,,
 35019,"Guadalupe County, New Mexico",With insurance,NHPI Alone,county,with health insurance,0,,0,NO,,

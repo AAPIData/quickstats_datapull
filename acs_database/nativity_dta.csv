@@ -1853,7 +1853,7 @@ GEOID,NAME,topic,group,geography,label,estimate,pct,summary_est,reliable,estimat
 35007,"Colfax County, New Mexico",nativity,Asian American Alone,county,Foreign-born,42,1,42,NO,,
 35009,"Curry County, New Mexico",nativity,Asian American Alone,county,Foreign-born,517,0.634,815,YES,517,0.634
 35011,"De Baca County, New Mexico",nativity,Asian American Alone,county,Foreign-born,0,0,6,NO,,
-35013,"Do�a Ana County, New Mexico",nativity,Asian American Alone,county,Foreign-born,1750,0.769,2276,YES,1750,0.769
+35013,"Dona Ana County, New Mexico",nativity,Asian American Alone,county,Foreign-born,1750,0.769,2276,YES,1750,0.769
 35015,"Eddy County, New Mexico",nativity,Asian American Alone,county,Foreign-born,188,0.836,225,NO,,
 35017,"Grant County, New Mexico",nativity,Asian American Alone,county,Foreign-born,32,0.405,79,NO,,
 35019,"Guadalupe County, New Mexico",nativity,Asian American Alone,county,Foreign-born,0,,0,NO,,
@@ -5486,7 +5486,7 @@ GEOID,NAME,topic,group,geography,label,estimate,pct,summary_est,reliable,estimat
 35007,"Colfax County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,,0,NO,,
 35009,"Curry County, New Mexico",nativity,NHPI Alone,county,Foreign-born,9,0.07,128,NO,,
 35011,"De Baca County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,,0,NO,,
-35013,"Do�a Ana County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,0,61,NO,,
+35013,"Dona Ana County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,0,61,NO,,
 35015,"Eddy County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,,0,NO,,
 35017,"Grant County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,0,6,NO,,
 35019,"Guadalupe County, New Mexico",nativity,NHPI Alone,county,Foreign-born,0,,0,NO,,

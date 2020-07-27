@@ -3707,8 +3707,8 @@ GEOID,NAME,topic,group,geography,label,estimate,pct,summary_est,reliable,estimat
 35009,"Curry County, New Mexico",LEP,Asian American Alone,county,LEP,206,0.263,784,NO,,
 35011,"De Baca County, New Mexico",LEP,Asian American Alone,county,Speak another language,6,1,6,NO,,
 35011,"De Baca County, New Mexico",LEP,Asian American Alone,county,LEP,0,0,6,NO,,
-35013,"Do�a Ana County, New Mexico",LEP,Asian American Alone,county,Speak another language,1551,0.708,2191,YES,1551,0.708
-35013,"Do�a Ana County, New Mexico",LEP,Asian American Alone,county,LEP,507,0.231,2191,YES,507,0.231
+35013,"Dona Ana County, New Mexico",LEP,Asian American Alone,county,Speak another language,1551,0.708,2191,YES,1551,0.708
+35013,"Dona Ana County, New Mexico",LEP,Asian American Alone,county,LEP,507,0.231,2191,YES,507,0.231
 35015,"Eddy County, New Mexico",LEP,Asian American Alone,county,Speak another language,157,0.698,225,NO,,
 35015,"Eddy County, New Mexico",LEP,Asian American Alone,county,LEP,101,0.449,225,NO,,
 35017,"Grant County, New Mexico",LEP,Asian American Alone,county,Speak another language,50,0.704,71,NO,,
@@ -10973,8 +10973,8 @@ GEOID,NAME,topic,group,geography,label,estimate,pct,summary_est,reliable,estimat
 35009,"Curry County, New Mexico",LEP,NHPI Alone,county,LEP,0,0,107,NO,,
 35011,"De Baca County, New Mexico",LEP,NHPI Alone,county,Speak another language,0,,0,NO,,
 35011,"De Baca County, New Mexico",LEP,NHPI Alone,county,LEP,0,,0,NO,,
-35013,"Do�a Ana County, New Mexico",LEP,NHPI Alone,county,Speak another language,0,0,61,NO,,
-35013,"Do�a Ana County, New Mexico",LEP,NHPI Alone,county,LEP,0,0,61,NO,,
+35013,"Dona Ana County, New Mexico",LEP,NHPI Alone,county,Speak another language,0,0,61,NO,,
+35013,"Dona Ana County, New Mexico",LEP,NHPI Alone,county,LEP,0,0,61,NO,,
 35015,"Eddy County, New Mexico",LEP,NHPI Alone,county,Speak another language,0,,0,NO,,
 35015,"Eddy County, New Mexico",LEP,NHPI Alone,county,LEP,0,,0,NO,,
 35017,"Grant County, New Mexico",LEP,NHPI Alone,county,Speak another language,2,0.333,6,NO,,

@@ -75,6 +75,10 @@ final <- rbind(aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 rm(label_aapi, aa_us, aa_st, aa_ct, aa_cd, pi_us, pi_st, pi_ct,  pi_cd)
 final <- final %>%
   filter(!str_detect(NAME, "Puerto Rico")) %>% 
+  filter(!str_detect(NAME, "PR Metro Area")) %>%
+  mutate(NAME = case_when(
+    str_detect(NAME, "Ana County, New Mexico") ~"Dona Ana County, New Mexico",
+    TRUE ~NAME)) %>%
   mutate(estimate_reliable = case_when(
     reliable == "YES" ~estimate,
     TRUE ~NA_real_)) %>% 
