@@ -1,8 +1,9 @@
 library(tidyverse)
 library(tidycensus)
 library(stringr)
+setwd("/Users/sunnyshao/Documents/quickstats_datapull")
 
-year_setting <- 2018
+year_setting <- 2019
 codebook <- load_variables(year =year_setting, dataset = "acs5", cache = TRUE)
 
 ##################

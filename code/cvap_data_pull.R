@@ -6,7 +6,7 @@
 
 library(tidyverse)
 library(stringr)
-
+setwd("/Users/sunnyshao/Documents/quickstats_datapull")
 data_us <- read_csv("cvap_raw/Nation.csv") %>% mutate(geography = "national")
 data_st <- read_csv("cvap_raw/State.csv") %>% mutate(geography = "state")
 data_ct <- read_csv("cvap_raw/County.csv") %>% mutate(geography = "county")

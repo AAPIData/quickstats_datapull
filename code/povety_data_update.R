@@ -3,7 +3,7 @@ library(tidycensus)
 library(stringr)
 
 ###change the year number when updating
-year_setting <- 2018
+year_setting <- 2019
 
 #getting the master codebook
 codebook <- load_variables(year =year_setting, dataset = "acs5", cache = TRUE)
